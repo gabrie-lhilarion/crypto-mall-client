@@ -5278,7 +5278,10 @@ span.amount-del {
 */
 
 
-
+.single-client {
+	display: flex;
+	flex-direction: column;
+}
 
 /* container width small device */
 
