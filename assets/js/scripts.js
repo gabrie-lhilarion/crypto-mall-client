@@ -33,7 +33,22 @@ Table Of Contents end
 
 	jQuery(document).on('ready', function () {
 
+		
+		const a_links = document.querySelectorAll('ul.navbar-nav a.nav-link');
+		const removeHeightLight = (elements) => {
+			elements.forEach(element => element.classList.remove('active'));
+		}
 
+		const heighlightIfNot = (e) => {
+			const current = e.target.classList.contains('active');
+			if(current) return
+
+			removeHeightLight(a_links);
+			e.target.classList.add('active');
+		};
+
+		a_links.forEach( link =>  link.addEventListener('click', (e) => heighlightIfNot(e)) )
+	
 		/* 1. PRELOADER JS */
 
 		$(window).on('load', function () {
