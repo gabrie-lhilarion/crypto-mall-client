@@ -39,6 +39,8 @@ Table Of Contents end
 			elements.forEach(element => element.classList.remove('active'));
 		}
 
+		// bootstrap modal
+
 		const heighlightIfNot = (e) => {
 			const current = e.target.classList.contains('active');
 			if(current) return
